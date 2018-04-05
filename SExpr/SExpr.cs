@@ -1,6 +1,6 @@
 ﻿namespace SExpr
 {
-    public interface ISExprNode
+    public interface ISExpr
     {
         SExprNodeType NodeType { get; }
     }

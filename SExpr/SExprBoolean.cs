@@ -1,6 +1,6 @@
 ﻿namespace SExpr
 {
-    public struct SExprBoolean : ISExprNode
+    public struct SExprBoolean : ISExpr
     {
         public SExprNodeType NodeType => SExprNodeType.Boolean;
 

@@ -1,6 +1,6 @@
 ﻿namespace SExpr
 {
-    public struct SExprString : ISExprNode
+    public struct SExprString : ISExpr
     {
         public SExprNodeType NodeType => SExprNodeType.String;
 

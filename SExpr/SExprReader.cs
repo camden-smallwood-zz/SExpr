@@ -75,7 +75,7 @@ namespace SExpr
             return result;
         }
 
-        public ISExprNode ReadSExprCons()
+        public ISExpr ReadSExprCons()
         {
             var token = ReadSExprToken();
 
@@ -119,7 +119,7 @@ namespace SExpr
             };
         }
 
-        public ISExprNode ReadSExprQuote()
+        public ISExpr ReadSExprQuote()
         {
             return new SExprCons
             {
@@ -132,7 +132,7 @@ namespace SExpr
             };
         }
 
-        public ISExprNode ReadSExprQuasiQuote()
+        public ISExpr ReadSExprQuasiQuote()
         {
             return new SExprCons
             {
@@ -145,7 +145,7 @@ namespace SExpr
             };
         }
 
-        public ISExprNode ReadSExprUnquote()
+        public ISExpr ReadSExprUnquote()
         {
             return new SExprCons
             {
@@ -158,7 +158,7 @@ namespace SExpr
             };
         }
 
-        public ISExprNode ReadSExprNode()
+        public ISExpr ReadSExprNode()
         {
         begin:
             if (Reader.BaseStream.Position >= Reader.BaseStream.Length)
@@ -202,9 +202,9 @@ namespace SExpr
             }
         }
 
-        public List<ISExprNode> ReadSExprNodes()
+        public List<ISExpr> ReadSExprNodes()
         {
-            var nodes = new List<ISExprNode>();
+            var nodes = new List<ISExpr>();
 
             while (Reader.BaseStream.Position < Reader.BaseStream.Length)
             {
